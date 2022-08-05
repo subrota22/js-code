@@ -145,3 +145,9 @@ var showArrayData = mySecondFunction(myNumbersOfArray) ;
 console.log(showArrayData);
 console.log("Total of even number : " , myFunctionOne) ;
 
+var day = 2 ;
+var hour2=2 ;
+var minute2 = 10 ;
+var second2 = 2*2*10*60 ;
+console.log("Day , Hour and Minuter into second : " , second2);
+
