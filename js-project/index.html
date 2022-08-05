@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .form{display: flex; justify-content: center;}
+    .number{width: 400px; padding: 10px; }
+    .start {padding: 10px; background-color: white;  }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chess board </title>
+</head>
+<body>
+    <table>
+
+    </table>
+    <h2> Universal time </h2>
+<span class="hour"></span> : 
+<span class="minute"></span> :
+<span class="second"></span>
+<span class="ampm"></span>
+<h2> Local time </h2>
+<span class="localTime"></span> : 
+<br><br>
+<div class="form">
+    <input type="text" class="board number" placeholder="Enter the number to generate the board" />
+<input type="submit" value="Start Generate" class="start"/>
+</div>
+<br><br>
+<script>
+document.querySelector(".start").addEventListener("click" , function() {
+ var data = parseInt(document.querySelector(".board").value );
+if(data==null) {
+    widow.alert("Please insert any number") ;
+
+}
+document.write("<table style='margin:auto; box-shadow:0 12px 48px lime; margin-top:50px;'>") ;
+for(var row=1; row<=data ; row++){
+    document.write("<tr>") ;
+    for(var col=1; col<=data; col++){
+        if((row+col)%2==0){
+            document.write("<td style='background-color:orange; height:50px; width:50px;  padding:20px;'>   </td>") ;
+        }else{
+            document.write("<td   style='background-color:black; height:50px; width:50px;  padding:20px;'>  </td>") ;
+        }
+    }
+    document.write("</tr>") ;
+}
+document.write("</table>") ;
+
+})
+</script>
+    <script src="index.js"></script>
+</body>
+</html>

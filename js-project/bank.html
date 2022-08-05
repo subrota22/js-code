@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+body{margin: 0%; background-color: rgb(6, 212, 85);} 
+        .formGroup{display: flex; justify-content: center;}
+        #choice , #start{padding: 30px; border: 2px solid cyan;
+             font-size: 21px; text-align: center; color: darkblue;
+        text-transform: uppercase;}
+        #choice{width: 420px;}
+        #start{background-color: cyan;}
+        #start:hover{background-color: darkcyan;}
+        .workingAuthority{
+           margin: auto;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            animation: info alternate infinite 1s linear forwards;
+            width: 50%;
+            border-radius: 5px;
+        }
+        .workingAuthority > ul > li {
+            list-style-position: inside;
+            list-style-type:decimal;
+            font-size: 21px;
+
+        }
+        .title{text-align: center; font-size: 40px; font-weight: 700; text-transform: uppercase; }
+
+ .video{width: 50%; margin: auto;}
+ #video{border-radius: 6px;}
+ #video:hover{transform: scale(0.8); transition: transform 2s ;}
+
+           @keyframes info {
+            from{background-color: blue;}
+             to{background-color: rgb(219, 11, 126);}
+           }
+           @media (max-width:700px) {
+            #choice{width: 220px;}
+            #choice , #start{padding: 10px; border: 2px solid cyan; font-size: 21px; text-align: center; color: darkblue;}
+        }
+        @media (max-width:570px) {
+            #choice{width: 120px;}
+            #choice , #start{padding: 10px; border: 2px solid cyan; font-size: 10px; text-align: center; color: darkblue;}
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank status</title>
+    <link rel="shortcut icon" href="https://thumbs.dreamstime.com/b/bank-icon-vector-sign-symbol-isolated-white-background-bank-logo-concept-bank-icon-vector-isolated-white-background-134167171.jpg" type="image/x-icon">
+</head>
+<body>
+  <h2 class="title">Bank services</h2>
+
+ <div class="formGroup">
+        <input type="text"  id="choice" placeholder="Enter your choice"/>
+        <input type="submit" value="Start" id="start"/>
+    </div>
+    <br><br><br>
+    <div class="workingAuthority">
+       <ul>
+        <li>Deposite money  </li>
+        <li>Withdraw money  </li>
+        <li>Transfer money   </li>
+        <li>Check your current bank status  </li>
+        <li>Claer info all  </li>
+        <li> Check your info </li>
+       </ul>
+    </div>
+
+    <br><br>
+
+<div class="video">
+    <video src="https://static.videezy.com/system/resources/previews/000/034/847/original/dollar11.mp4" autoplay muted loop id="video"></video>
+</div>
+<script src="bank.js"></script>
+<br><br>
+</body>
+</html>

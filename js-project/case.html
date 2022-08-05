@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case</title>
+</head>
+<body>
+    <script>
+        /*
+       if(12<100){
+        console.log("-------------------------Right----------------------------");
+       }else{
+        console.log("---------------------------Wrong--------------------------");
+       }
+       var number = 2 ;
+       var number2= 10 ;
+       var storeNumber = 0 ;
+       switch (number) {
+        case 2:
+        function numberGet() {
+          var usernumber = parseInt(prompt("Enter an number")) ;
+          if(usernumber>number2) {
+            alert("You are entered big value")
+          }else{
+            alert(
+                "Your value limit is right"
+            )
+            storeNumber = storeNumber + usernumber ;
+            alert("Now value is " + storeNumber) ;
+          }
+        }
+        numberGet() ;
+         break;
+       
+        default:
+        console.log("Invalid number");
+            break;
+       }
+       */
+      const userInput = prompt("Enter any word") ;
+      var userRightInput = userInput.toLocaleLowerCase() ;
+       switch (userRightInput) {
+        case "a":
+            console.log("Vowel");
+            break;
+        case "e":
+            console.log("Vowel");
+            break;
+        case "i":
+            console.log("Vowel");
+            break;
+        case "o":
+            console.log("Vowel");
+            break;
+        case "u":
+            console.log("Vowel");
+            break;
+       
+        default:
+        console.log("Consonant");
+            break;
+       }
+    </script>
+</body>
+</html>
