@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.3.2/math.js"></script>
+<head>
+    <title> Matrix math </title>
+</head>
+<body>
+
+<h2>  Matrix Addition </h2>
+
+<div id="demo"></div>
+
+<h2>Multiplay  of matrix </h2>
+
+<div id="demo2"></div>
+
+<h2>Matrix Scalar Multiplication</h2>
+
+<div id="demo3"></div>
+<script>
+const mA = math.matrix([[1, 2], [3, 4], [5, 6]]);
+const mB = math.matrix([[1,-1], [2,-2], [3,-3]]);
+
+// Matrix Addition
+const matrixAdd = math.add(mA, mB);
+document.getElementById("demo").innerHTML = matrixAdd;
+// Result [ [2, 1], [5, 2], [8, 3] ]
+
+//------- Matrix Multiplication--------//
+
+const mA2 = math.matrix([[1, 2, 3]]);
+const mB2 = math.matrix([[1, 2, 3], [1,2,3], [1, 2, 3]]);
+// Matrix Multiplication
+const matrixMult = math.multiply(mA2, mB2);
+
+// Result [ [6, 12, 18] ]
+document.getElementById("demo2").innerHTML = matrixMult;
+
+//-----------------
+const mA3 = math.matrix([[1, 2], [3, 4], [5, 6]]);
+
+// Matrix Scalar Multiplication
+const matrixMult2 = math.multiply(2, mA3);
+
+// Result [ [2, 4], [6, 8], [10, 12] ]
+document.getElementById("demo3").innerHTML = matrixMult2;
+
+</script>
+
+</body>
+</html>
+

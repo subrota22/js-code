@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript Example</title>
+    </head>
+    <body>
+ <h2> integral </h2>
+    <div class="integral"></div>  
+        <script>
+        Math.integral=function(a,b,c,xa,xb,h)
+        {
+ 
+        var xp,y,s,result=0,g=(xb-xa)/h;
+        for(var i=0;i<h;i++)
+        {
+        xp = xa + g;
+        y = (a * Math.pow(xp, 2)) + (b * xp) + c;
+        s = g * y;
+        result += s;
+        }
+ 
+        return result;
+        }
+ 
+        /*Using the sample*/
+       var show =  Math.integral(1,4,2,10,50,100) ;
+    document.querySelector(".integral").innerHTML = show ; 
+        </script>  
+    </body>
+</html>
