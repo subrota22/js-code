@@ -182,6 +182,8 @@ var callTicket = ticketFunc(qauntityOfTicket) ;
 
 console.log(" You have to pay : " , callTicket); 
 
-
-
+var myArray = [122,45,12,35,45,20] ;
+console.log(Array.isArray(myArray));
+myArray.splice(1,3 , '--->' , 10,20,30,40,50 , '<---') ;
+console.log("Splie get up :" , myArray);
 
