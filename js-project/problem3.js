@@ -47,8 +47,10 @@ function ticketFunction (ticketBuy) {
     var thirdTicketPrice = 200 ;
     var forthTicketPrice = 120 ;
 
-
-    if(ticketBuy <= 120 ) {
+if(ticketBuy <= 0 || ticketBuy > 500) {
+    console.log("-------->Please enter 1 to 500 our service limitation from 500 ticket at a time<----------");
+}
+  else  if(ticketBuy <= 120 ) {
         var totalPrice = ticketBuy * firstTicketPrice ;
         return totalPrice ;
     }
@@ -78,12 +80,10 @@ else if(ticketBuy >= 120) {
     var  totalPrice = firstTicketDiscount + secondTicketDiscount + thirdTicketDiscount + forthTicketDiscount ;
     return totalPrice ;
 
- } else {
-    console.log("Please enter valid number");
- }
+ } ;
 }
 
-var ticketBuy = 58 ;
+var ticketBuy = 0;
 var callTicket = ticketFunction(ticketBuy) ;
 
 console.log("Ticket discount offer :" , callTicket);
