@@ -126,3 +126,109 @@ var callArrayOfSum = sumOfArray(array2) ;
 console.log("The output of array : " ,callArrayOfSum.sort() );
 
 console.log("All number of array : " , array2);
+
+//show the max and minmum number with Math.max//
+
+var array11 = [10,25,78,65,45] ;
+var sorting = array11.sort() ;
+for(var i=0 ; i<array11.length ; i++) {
+    var element = array11[i] ;
+   var max =  Math.max(element) ;
+}
+console.log( max );
+//--------------- minimum number of array ------------------//
+for(var i=array11.length ; i >= 0 ; i--) {
+    var element = array11[i] ;
+   var minNumber =  Math.min(element) ;
+}
+console.log( minNumber );
+
+//show the minimum number and maximum number of an array 
+let arrayOfMinAndMax = [78,12,45,24,45,68,200,32,27,19,6] ;
+//min number of function
+function minNumber2(arrayOfMinAndMax) {
+    var storeMinNumber = arrayOfMinAndMax[0] ;
+for(let i=0 ; i<arrayOfMinAndMax.length ; i++) {
+    var elementOfNumber = arrayOfMinAndMax[i] ;
+    if(elementOfNumber < storeMinNumber) {
+        storeMinNumber = elementOfNumber ;
+    }
+}
+ return storeMinNumber ;
+}
+let callMin = minNumber2(arrayOfMinAndMax) ;
+
+console.log("Min number of array " , callMin);
+
+
+//max number of function
+function maxNumber2(arrayOfMinAndMax) {
+    var storeMaxNumber = arrayOfMinAndMax[0] ;
+  for(let i=0 ; i<arrayOfMinAndMax.length ; i++) {
+    var elementOfNumber = arrayOfMinAndMax[i] ;
+    if(elementOfNumber > storeMaxNumber) {
+        storeMaxNumber = elementOfNumber ;
+    }
+}
+ return storeMaxNumber ;
+}
+let callMax = maxNumber2(arrayOfMinAndMax) ;
+
+console.log("Max number of array " , callMax);
+
+//duplicated value off
+var nameOfHabul = ['subrota' , 'subrota' , 'diposh' , 'diposh' , 'bidhan' , 'bidhan' , 'kartik' , 'gonesh' , 'subrota'] ;
+
+function stopDuplicatedValue(nameOfHabul){
+var pushArray = [];
+for(let i=0 ; i<nameOfHabul.length; i++) {
+    var elementOfHabul = nameOfHabul[i] ;
+
+    if(pushArray.indexOf(elementOfHabul) === -1) { //indexOf(element) === -1 
+        pushArray.push(elementOfHabul); 
+    }
+}
+return pushArray ;
+}
+
+let callDuplicated = stopDuplicatedValue(nameOfHabul) ;
+
+console.log("Stop the duplicated value" , callDuplicated);
+
+//----------------- 2 ---------------//
+var checkArrayName = [ 'bijoy' ,'bijoy' ,'bijoy' , 'niloy' , 'niloy' , 'niloy' , 'joya' ,'joya' ,'joya' , 'sreya' ] ;
+
+function checkName (checkArrayName) {
+var pushName = [] ;
+for(let j=0 ; j<checkArrayName.length; j++) {
+    var elementOfName = checkArrayName[j] ;
+    if(pushName.indexOf(elementOfName) === -1) {
+        pushName.push(elementOfName) ;
+    }
+}
+return pushName ;
+}
+
+let checkNameFunc = checkName(checkArrayName) ;
+console.log(checkNameFunc);
+
+//----------- fabonacci ------------- // 
+
+var fabonacci = [ 0, 1  ] ;
+
+for(var i=2 ; i<=30; i++) { //start i=2 
+    fabonacci[i] = fabonacci[i-1] + fabonacci[i-2] ; // i-2 -> i=2
+}
+console.log(fabonacci);
+
+//object 
+
+var product = 
+{
+    name: "phone" , price:22563 , color:"black" 
+}
+var keys = Object.keys(product) ;
+var value = Object.values(product) ;
+product.color ="silver" ;
+console.log(keys  , value) ;
+console.log(product);
