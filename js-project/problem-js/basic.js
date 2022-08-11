@@ -106,9 +106,9 @@ function radianToDegree(radian) {
     
     //-------------------------- check best friend start ------------------------//
     
-    function   isBestFriend(friend1 , friend2) {
-    if(typeof friend1.name ==="string" && typeof friend1.friend ==="string" && typeof friend2.name ==="string" && typeof friend2.friend ==="string" ) {
-        if(friend1.name==="abul" && friend2.friend==="abul" && friend2.name==="babul" && friend1.friend==="babul") {
+    function   isBestFriend(firstFriendCheck , secondFriendCheck) {
+    if(typeof firstFriendCheck.name ==="string" && typeof firstFriendCheck.friend ==="string" && typeof secondFriendCheck.name ==="string" && typeof secondFriendCheck.friend ==="string" ) {
+        if(firstFriendCheck.name==="abul" && secondFriendCheck.friend==="abul" && secondFriendCheck.name==="babul" && firstFriendCheck.friend==="babul") {
             return true ;
         }else{
             return false ;
@@ -119,10 +119,10 @@ function radianToDegree(radian) {
     
     }
     
-    let friend1 = { name: "abul" , friend : "babul"} ;
-    let friend2 = { name: "babul" , friend : "abul"} ;
+    let firstFriend= { name: "abul" , friend : "babul"} ;
+    let secondFriend = { name: "babul" , friend : "abul"} ;
     
-    const callIsBestFriend = isBestFriend(friend1 , friend2) ;
+    const callIsBestFriend = isBestFriend(firstFriend , secondFriend) ;
     
     console.log(callIsBestFriend );
     
