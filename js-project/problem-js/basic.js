@@ -78,8 +78,14 @@ function radianToDegree(radian) {
         const microBusSeatAvailAble = 11 ;
     
      if(typeof people === "number") {
-    
-        if(people >= 50) {
+    if(people >=11 && people < 50 ) {
+        const microBusNeed = Math.floor(people/microBusSeatAvailAble) ;
+        const microBusPeople = microBusNeed * microBusSeatAvailAble ;
+        const remainingFromMicrobus = Math.abs( microBusPeople - people ) ;
+        const coastForPublicBusFare = remainingFromMicrobus * 250 ;
+       return coastForPublicBusFare ;
+    }
+      else   if(people >= 50) {
           const busNeeed= Math.floor(people / BusSeatAvailAble) ;
           const busPeople = busNeeed * BusSeatAvailAble ;
           const remainingFromBus = Math.abs(busPeople - people ) ;
@@ -89,14 +95,18 @@ function radianToDegree(radian) {
           const remainingFromMicroBus = Math.abs( remainingFromMicroBusWithPeople - busPeople ) ;
           const coastForPublicBusFare = remainingFromMicroBus * 250 ;
          return coastForPublicBusFare ;
-        } ;
+        } else
+        {
+            const coastForLocalBus = people * 250 ;
+            return coastForLocalBus ;
+        }
     
      } else{
         console.log("Please enter valid number");
      }
     }
     //variable to use parameter of function
-    let people = 55;
+    let people = 212;
     //call publicBusFare function
     const callBusFare = publicBusFare(people) ;
     
@@ -107,8 +117,10 @@ function radianToDegree(radian) {
     //-------------------------- check best friend start ------------------------//
     
     function   isBestFriend(firstFriendCheck , secondFriendCheck) {
-    if(typeof firstFriendCheck.name ==="string" && typeof firstFriendCheck.friend ==="string" && typeof secondFriendCheck.name ==="string" && typeof secondFriendCheck.friend ==="string" ) {
-        if(firstFriendCheck.name==="abul" && secondFriendCheck.friend==="abul" && secondFriendCheck.name==="babul" && firstFriendCheck.friend==="babul") {
+    if(typeof firstFriendCheck.name ==="string" && typeof firstFriendCheck.friend ==="string" && 
+    typeof secondFriendCheck.name ==="string" && typeof secondFriendCheck.friend ==="string" ) {
+        if(firstFriendCheck.name.toLowerCase() ==="abul" && secondFriendCheck.friend.toLowerCase()==="abul"
+         && secondFriendCheck.name.toLowerCase()==="babul" && firstFriendCheck.friend.toLowerCase()==="babul") {
             return true ;
         }else{
             return false ;
@@ -119,8 +131,12 @@ function radianToDegree(radian) {
     
     }
     
-    let firstFriend= { name: "abul" , friend : "babul"} ;
-    let secondFriend = { name: "babul" , friend : "abul"} ;
+    let firstFriend= {
+         name: "abul" , friend : "babul" , gender: "male" , school:"dadra high school" , education: "HSC" , divisition: "science"
+        } ;
+    let secondFriend = {
+         name: "babul" , friend : "abul" , gender: "male" , school:"dadra high school" , education: "HSC" , divisition: "science"
+        } ;
     
     const callIsBestFriend = isBestFriend(firstFriend , secondFriend) ;
     
