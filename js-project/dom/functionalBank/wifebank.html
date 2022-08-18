@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+SA+Beginner&family=Finlandica:ital,wght@1,600&family=Gentium+Book+Plus:ital,wght@0,700;1,700&family=Lato:wght@700&family=Open+Sans:ital,wght@0,300;1,400&family=Poppins:wght@300;500&family=Raleway:wght@200&family=Roboto&family=Roboto+Slab:wght@300&display=swap');
+        body{
+            background-image: url("https://thumbs.dreamstime.com/z/angry-husband-shouting-his-guilty-wife-bank-statement-financial-crisis-family-home-181445854.jpg");
+           background-attachment: fixed;
+           background-size: cover;
+           font-family: 'Poppins', sans-serif;
+        }
+    </style>
+<head>
+    <!-- tailwind css cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wife bank </title>
+    <link rel="shortcut icon" href="https://thumbs.dreamstime.com/z/finances-divorce-wife-husband-can-not-make-settlement-concept-holding-piggy-bank-sitting-table-looking-each-other-79591447.jpg" type="image/x-icon">
+</head>
+<body>
+<div class="conatainer mx-auto">
+    <h2 class="text-5xl font-bolder my-10 text-indigo-800 text-center"> Let's start  <span class="text-red-400"> your work  </span> !!  </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10">
+        <div class="bg-sky-800 p-10 font-bolder rounded-lg m-4 ">
+            <h2 class="text-4xl text-white">Deposite money</h2>
+            <h2 class="text-5xl text-white">$ <span id="depositMoney">00</span></h2>
+        </div>
+        <div class="bg-indigo-800 p-10 font-bolder rounded-lg  m-4">
+            <h2 class="text-4xl text-white">Withdraw money</h2>
+            <h2 class="text-5xl text-white">$ <span id="withdrawMoney">00</span></h2>
+        </div>
+        <div class="bg-red-800 p-10 font-bolder rounded-lg  m-4">
+            <h2 class="text-4xl text-white">Bank balance </h2>
+            <h2 class="text-5xl text-white"> $ <span id="bankBalance">5</span> </h2>
+        </div>
+        </div>
+    
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 my-10 ">
+            <div class="bg-sky-800 p-10 font-bolder rounded-lg  m-4">
+                <h2 class="text-4xl text-white">Deposite Now </h2>
+              <input type="text" class="font-bolder rounded-lg p-5 w-9/12 my-5" id="depositFeild" placeholder="$ Enter your deposit amount" />
+           <button class="font-bolder block text-white text-2xl bg-lime-400 rounded p-4 w-40 hover:bg-green-800" id="depositButton">Depostie </button>
+            </div>
+            <div class="bg-indigo-800 p-10 font-bolder rounded-lg  m-4" id="withdrawMsg">
+                <h2 class="text-4xl text-white">Withdraw Now </h2>
+                <input type="text" class="font-bolder rounded-lg p-5 w-9/12 my-5 " id="withdrawFeild" placeholder="$ Enter your withdraw amount" />
+               <button class="font-bolder text-white block text-2xl bg-sky-400 rounded p-4 w-40 hover:bg-green-800" id="withdrawButton">Withdraw </button>
+                 </div>
+                        </div>
+              </div>
+              <!-- js link  -->
+              <script src="wifebank.js"></script>
+         </body>
+</html>

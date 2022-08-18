@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+ .body{
+background-image: url("https://thumbs.dreamstime.com/b/banking-business-banner-finance-savings-bank-building-silhouette-city-background-vector-illustration-84498181.jpg");
+background-size: cover;   
+background-position: center;
+background-attachment: fixed;
+}
+</style>
+<head>
+    <!-- tailwindcss cdn link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mukto bank </title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6_%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%82%E0%A6%95%E0%A7%87%E0%A6%B0_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A4%E0%A7%80%E0%A6%95.svg/1200px-%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6_%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%82%E0%A6%95%E0%A7%87%E0%A6%B0_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A4%E0%A7%80%E0%A6%95.svg.png" type="image/x-icon"/>
+</head>
+<body class="body">
+   <section class="container mx-auto">
+    <header>
+        <h2 class="text-red-400 text-4xl text-center my-5 font-bold uppercase"> Let's get some <span class="text-blue-700"> money !! </span></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 mb-10">
+             <div class="bg-sky-600 p-8 rounded-lg shadow shadow-zinc-400 ml-5 px-3 py-20">
+                <h2 class="text-center font-bolder text-white text-3xl font-bold ">Deposit amount </h2>
+                <h2 class="text-center font-bolder text-white text-4xl font-bold" >  $ <span id="depositeAmount"> 00 </span>  </h2>
+            </div>
+            <div class="bg-blue-600 p-8 rounded-lg shadow shadow-zinc-400 m-2 p-5  ml-5 px-3 py-20">
+                <h2 class="text-center font-bolder text-white text-3xl font-bold ">Withdraw amount </h2>
+                <h2 class="text-center font-bolder text-white text-4xl font-bold "> $ <span  id="withdrawAmount">00</span>  </h2>
+            </div>
+            <div class="bg-pink-600 p-8 rounded-lg  shadow shadow-zinc-400 m-2 p-5  ml-5 px-3 py-20">
+                <h2 class="text-center font-bolder text-white text-3xl font-bold ">Bank balance </h2>
+                <h2 class="text-center font-bolder text-white text-4xl font-bold"  > $ <span id="bankBalance"> 1240 </span>  </h2>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+            <div class="bg-emerald-700 p-8 rounded-lg shadow shadow-zinc-400  m-2 p-5">
+                <h2 class="text-center font-bolder text-white text-3xl font-bold ">Deposit amount </h2>
+                <input type="text"  id="depositField" placeholder="Enter your deposite amount" class="block px-4 py-4 rounded-lg w-3/4 m-2 font-bold text-2xl"/>
+                <input type="button" value="Deposit"  id="deposit" class="bg-indigo-600 hover:bg-sky-600 ml-28 text-3xl font-bold text-white my-3 duration-700 px-4 py-4 rounded-lg w-2/4"/>
+            </div>
+            <div class="bg-cyan-700 p-8 rounded-lg  shadow shadow-zinc-400  m-2 p-5">
+            <h2 class="text-center font-bolder text-white text-3xl font-bold ">Withdraw amount </h2>
+            <input type="text"  id="withdrawField" placeholder="Enter your withdraw amount" class="block px-4 py-4 rounded-lg w-3/4 m-2 font-bold text-2xl"/>
+          <input type="button" value="Withdraw"  id="withdraw"  class="bg-yellow-600 hover:bg-sky-600 ml-28 text-3xl font-bold text-white my-3 duration-700 px-4 py-4 rounded-lg w-2/4"/>
+      </div>
+        </div>
+    </main>
+   </section>
+          <!-- js link  -->
+          <script src="bank.js"></script>
+</body>
+</html>

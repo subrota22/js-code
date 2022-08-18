@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+    <style>
+        .item , #items{
+            font-size: 18px;
+            color: lime;
+            list-style-type: none;
+        }
+        button{
+            width: 20%;
+            border: none;
+            background-color: white;
+            border-radius: 25px;
+            padding: 12px;
+            text-transform: uppercase;
+            font-size: large;
+            margin: 10px;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble and delegate </title>
+</head>
+<body id="body">
+    <button class="darkTheme">dark theme </button>
+<div class="ulContainer">
+    <h2> Bubble handle</h2>
+    <ul class="li-ul">
+        <li class="item-1 ">
+            <p>Price:100</p>
+        </li>
+        <li class="item-2 ">
+            <p>Price:200</p>
+        </li>
+        <li class="item-3 ">
+            <p>Price:300</p>
+        </li>
+        <li class="item-4 ">
+            <p>Price:400</p>
+        </li>
+        <li class="item-5 ">
+            <p>Price:500</p>
+        </li>
+        <li class="item-6">
+            <p>Price:600</p>
+        </li>
+    </ul>
+</div>
+<div class="ul">
+    <ul id="adddList">
+        <li class="item">
+            <p>price:01</p>
+        </li>
+        <li class="item">
+            <p>price:02</p>
+        </li>
+        <li class="item">
+            <p>price:03</p>
+        </li>
+        <li class="item">
+            <p>price:04</p>
+        </li>
+        <li class="item">
+            <p>price:05</p>
+        </li>
+        <li class="item">
+            <p>price:06</p>
+        </li>
+    </ul>
+    <button id="add">Add item </button>
+</div>
+
+<div class="moreList">
+    <ul class="listItem">
+        <li id="items">
+            <p>We should think 1000 </p>
+        </li>
+        <li id="items">
+            <p>We should think 2000 </p>
+        </li>
+        <li id="items">
+            <p>We should think 3000 </p>
+        </li>
+        <li id="items">
+            <p>We should think 4000 </p>
+        </li>
+        <li id="items">
+            <p>We should think 5000 </p>
+        </li>
+        <li id="items">
+            <p>We should think 6000 </p>
+        </li>
+        <li id="items">
+            <p>We should think 7000 </p>
+        </li>
+        <li id="items">
+            <p>We should think 8000 </p>
+        </li>
+    </ul>
+    <button id="addMore"> ADD MORE </button>
+</div>
+<section>
+    <br><br>
+    <button onclick="alert('hello boss')">click me </button>
+    <button onclick="alertMessage()">click me </button>
+    <button id="click">click me </button>
+    <button id="click2">click me 2 </button>
+    <button id="changeMe">change me </button>
+    <br><br>
+</section>
+<script type="text/javascript">
+    function alertMessage() {
+        alert("Hello friends call onclick");
+    }
+  const click2 = document.getElementById("click2") ;
+click2.onclick = message; 
+function message () {
+alert("Smart functin is clicked by id ")
+}
+document.querySelector(".item-2").addEventListener("click" , function() {
+    console.log("Item 2 is clicked");
+})
+document.querySelector(".li-ul").addEventListener("click" , function() {
+    console.log("ul list is clicked");
+})
+document.querySelector(".ulContainer").addEventListener("click" , function() {
+    console.log("ul container is clicked");
+})
+document.querySelector("#body").addEventListener("click" , function() {
+    console.log("Body is clicked");
+});
+
+document.getElementById("html").addEventListener("click" , function() {
+    console.log("Html is clicked");
+});
+//--------------- List check with delegate ---------------//
+// const items = document.getElementsByClassName("item") ; //itrate with class
+// for(const item of items) {
+//   item.addEventListener("click" , function(event) {
+//     event.target.parentNode.removeChild(event.target);
+//   })
+// }
+//add
+document.getElementById("add").addEventListener("click" , function() {
+    const liadd = document.getElementById("adddList") ;
+    const li = document.createElement("li") ;
+    li.innerText="Brand new item" ;
+    liadd.appendChild(li) ;
+    li.setAttribute("class" ,"item") ; //class than class name --> id than id name 
+});
+
+//remove list
+
+document.getElementById("adddList").addEventListener("click" , function(event) {
+ event.target.parentNode.removeChild(event.target) ;
+});
+
+//------------> sibling start 
+const sibl = document.getElementById("click").previousElementSibling ;
+sibl.style.backgroundColor="lime" ;
+const sibl2 = document.getElementById("click").nextElementSibling ;
+sibl2.style.backgroundColor="orange" ;
+//-----------> sibling end
+document.querySelector(".listItem").addEventListener("click" ,function(event) {
+event.target.parentNode.removeChild(event.target) ;
+})
+//addMore
+document.querySelector("#addMore").addEventListener("click" ,function() {
+const listItem = document.querySelector(".listItem") ;
+const liCreate = document.createElement("li");
+liCreate.innerText ="Added item" ;
+liCreate.setAttribute("id" , "items") ;
+listItem.appendChild(liCreate) ;
+})
+
+document.querySelector(".darkTheme").addEventListener("click" , function() {
+    document.body.style.backgroundColor ="black" ;
+    document.body.style.color ="lime" ;
+})
+//
+
+const click = document.getElementById("click") ;
+click.onclick = function () {
+alert("anonimous function is working")
+const click = document.getElementById("click");
+click.innerText ="clicked" ;
+}
+//
+document.getElementById("changeMe").addEventListener("click" , function() {
+    document.getElementById("changeMe").innerText ="clicked";
+    document.getElementById("changeMe").style.color ="green";
+    document.getElementById("changeMe").style.backgroundColor ="tomato";
+})
+</script>
+</body>
+</html>

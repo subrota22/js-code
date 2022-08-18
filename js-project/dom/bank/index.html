@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+.body{
+background-image: url("https://image.shutterstock.com/image-photo/businessman-holding-word-banking-hand-260nw-1150180799.jpg");
+background-size: cover;   
+background-position: center;
+background-attachment: fixed;
+}
+    </style>
+<head>
+    <!-- tailwindcss cdn link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mukto bank </title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6_%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%82%E0%A6%95%E0%A7%87%E0%A6%B0_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A4%E0%A7%80%E0%A6%95.svg/1200px-%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6_%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%82%E0%A6%95%E0%A7%87%E0%A6%B0_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A4%E0%A7%80%E0%A6%95.svg.png" type="image/x-icon"/>
+</head>
+<body class="body">
+<section>
+<div class="mt-20">
+    <h2 class="text-red-400 text-4xl text-center my-5 font-bold uppercase"> Mukto bank <span class="text-blue-700">services forever </span></h2>
+    <form class="bg-blue-400 rounded-lg shadow-lg p-8 w-2/4 mx-auto">
+    <input type="email"  id="email" placeholder="Enter your email" class="block px-4 py-4 rounded-lg w-3/4 m-2 font-bold text-2xl"/>
+    <input type="password"  id="password" placeholder="Enter your password" class="block px-4 py-4 rounded-lg w-3/4 m-2 font-bold text-2xl"/>
+    <input type="button" value="Log in"  id="submit" placeholder="Enter your email" class="bg-green-600 hover:bg-sky-600 ml-28 text-3xl font-bold text-lime-400 my-3 duration-700 px-4 py-4 rounded-lg w-2/4"/>
+    </form>  
+</div>
+</section>
+
+<script type="text/javascript">
+    document.getElementById("submit").addEventListener("click" , function(){
+        const email = document.getElementById("email").value ;
+        const password = document.getElementById("password").value;
+        if(email==="subrota@gmail.com" && password==="subrota12") {
+            window.location.href ="bank.html" ;
+        }else{
+            alert("Invalid user") ;
+        }
+    })
+</script>
+</body>
+</html>
+

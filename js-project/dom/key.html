@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Key </title>
+</head>
+<body>
+    <button id="hello">Hello</button>
+    <button id="hello2">Hello2</button>
+    <button id="hello3">Hello3</button>
+    <button id="hello4">Hello4</button>
+    <br><br>
+    <input type="text" name="" id="key">
+    <input type="text" name="" id="key2">
+    <input type="text" name="" id="key3">
+    <input type="text" name="" id="key4">
+    <input type="text" name="" id="key5">
+    <script>
+document.getElementById("hello").addEventListener("mouseenter" , function () {
+    console.log("Mouse enteried");
+})
+document.getElementById("hello2").addEventListener("mouseover" , function () {
+    console.log("Mouse mouseover");
+})
+document.getElementById("hello3").addEventListener("mousedown" , function () {
+    console.log("Mouse mousedown");
+})
+
+document.getElementById("key").addEventListener("keydown" , function () {
+    console.log("keydown ok");
+    const key = document.getElementById("key") ;
+    key.style.backgroundColor ="red" ;
+
+})
+
+document.getElementById("key").addEventListener("keydown" , function () {
+    console.log("keydown ok");
+    const key = document.getElementById("key") ;
+    key.style.backgroundColor ="red" ;
+
+})
+
+document.getElementById("key2").addEventListener("keyup" , function () {
+    console.log("keyup ok");
+    const key = document.getElementById("key2") ;
+    key.style.backgroundColor ="red" ;
+    if(key.value ==='key'){
+        console.log("keyup Ok");
+    }
+    console.log(key);
+
+})
+
+document.getElementById("key3").addEventListener("beforeinput" , function () {
+    console.log("beforeinput ok");
+    const key = document.getElementById("key3") ;
+    key.style.backgroundColor ="red" ;
+    if(key==='key'){
+        console.log("Ok");
+    }
+    console.log(key);
+
+})
+
+document.getElementById("key4").addEventListener("focus" , function () {
+    console.log("focus ok");
+    const key = document.getElementById("key4") ;
+    key.style.backgroundColor ="red" ;
+    if(key==='key'){
+        console.log("Ok");
+    }
+    console.log(key);
+
+})
+
+document.getElementById("key5").addEventListener("keypress" , function (event) {
+    console.log("keypress ok");
+    const key = document.getElementById("key5") ;
+    key.value = "" ;
+    key.style.backgroundColor ="red" ;
+
+    if(key.value ==='key'){
+        console.log("Ok");
+    }
+    console.log("------------->" , event.target.value);
+
+})
+    </script>
+</body>
+</html>

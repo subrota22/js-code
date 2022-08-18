@@ -74,23 +74,23 @@ function radianToDegree(radian) {
     
     function publicBusFare (people) {
     
-        const BusSeatAvailAble = 50 ;
-        const microBusSeatAvailAble = 11 ;
+        const BusSeatAvailable = 50 ;
+        const microBusSeatAvailable = 11 ;
     
-     if(typeof people === "number") {
+     if(typeof people === "number" && people >= 0 ) {
     if(people >=11 && people < 50 ) {
-        const microBusNeed = Math.floor(people/microBusSeatAvailAble) ;
-        const microBusPeople = microBusNeed * microBusSeatAvailAble ;
+        const microBusNeed = Math.floor(people/microBusSeatAvailable) ;
+        const microBusPeople = microBusNeed * microBusSeatAvailable ;
         const remainingFromMicrobus = Math.abs( microBusPeople - people ) ;
         const coastForPublicBusFare = remainingFromMicrobus * 250 ;
        return coastForPublicBusFare ;
     }
-      else   if(people >= 50) {
-          const busNeeed= Math.floor(people / BusSeatAvailAble) ;
-          const busPeople = busNeeed * BusSeatAvailAble ;
+      else if(people >= 50) {
+          const busNeeed= Math.floor(people / BusSeatAvailable) ;
+          const busPeople = busNeeed * BusSeatAvailable ;
           const remainingFromBus = Math.abs(busPeople - people ) ;
-          const microBusNeed = Math.floor(remainingFromBus/microBusSeatAvailAble) ;
-          const microBusPeople = microBusNeed * microBusSeatAvailAble ;
+          const microBusNeed = Math.floor(remainingFromBus/microBusSeatAvailable) ;
+          const microBusPeople = microBusNeed * microBusSeatAvailable ;
           const remainingFromMicroBusWithPeople = Math.abs( microBusPeople - people ) ;
           const remainingFromMicroBus = Math.abs( remainingFromMicroBusWithPeople - busPeople ) ;
           const coastForPublicBusFare = remainingFromMicroBus * 250 ;

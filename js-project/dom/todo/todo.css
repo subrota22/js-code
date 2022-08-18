@@ -1,0 +1,30 @@
+.form-group{
+    display:flex;
+    justify-content:center;
+    margin:auto;
+    margin-bottom:20px;
+    margin-top:20px;
+}
+.text{
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    padding: 12px;
+    background-color: white;
+    border: none;
+    width:70%;
+    text-transform:uppercase;
+    font-size:14px;
+    font-weight: bolder;
+    color:blue;
+
+}
+.submit-text{
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 12px;
+    background-color: rgb(21, 206, 76);
+    border: none;  
+    text-transform:uppercase;
+    font-weight: bolder;
+    color:rgb(246, 246, 255);
+}

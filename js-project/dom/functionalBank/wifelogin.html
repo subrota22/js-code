@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+SA+Beginner&family=Finlandica:ital,wght@1,600&family=Gentium+Book+Plus:ital,wght@0,700;1,700&family=Lato:wght@700&family=Open+Sans:ital,wght@0,300;1,400&family=Poppins:wght@300;500&family=Raleway:wght@200&family=Roboto&family=Roboto+Slab:wght@300&display=swap');
+        body{
+            background-image: url("https://thumbs.dreamstime.com/z/angry-husband-shouting-his-guilty-wife-bank-statement-financial-crisis-family-home-181445854.jpg");
+           background-attachment: fixed;
+           background-size: cover;
+           font-family: 'Poppins', sans-serif;
+        }
+        #loginButton:hover{
+        cursor: pointer;
+        }
+        #email:hover , #password:hover {
+            cursor:grab;
+        }
+    </style>
+<head>
+    <!-- tailwind css cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wife bank login  </title>
+    <link rel="shortcut icon" href="https://thumbs.dreamstime.com/z/finances-divorce-wife-husband-can-not-make-settlement-concept-holding-piggy-bank-sitting-table-looking-each-other-79591447.jpg" type="image/x-icon">
+</head>
+<body>
+<section>
+    <h2 class="text-5xl font-bolder my-10 text-indigo-800 text-center"> Welcome to our <span class="text-lime-400">wife bank </span> !!  </h2>
+    <form class="bg-lime-400 w-2/4 p-8 rounded-lg mt-20 mx-auto">
+        <input type="email"  id="email" placeholder="Enter your valid email address" class="p-5 rounded-lg w-9/12 my-5 font-bolder block"/>
+        <input type="password"  id="password" placeholder="Enter your valid password " class="p-5 rounded-lg w-9/12 my-5 font-bolder block"/>
+        <input type="button"  value="Log in" id="loginButton" class="p-5 text-white rounded-lg w-9/12 my-5 font-bolder block bg-indigo-400"/>
+    </form>
+</section>
+
+    <script type="text/javascript">
+        document.getElementById("loginButton").addEventListener("click" , function() {
+            const email = document.getElementById("email") ;
+            const password = document.getElementById("password") ;
+            const emailValue = email.value ;
+            const passwordValue = password.value ;
+            if(emailValue === "wife12@gmail.com" && passwordValue === "wife123") {
+                window.location.href ="wifebank.html" ;
+             }else{
+            alert("Invalid user") ;
+            window.location.href ="wifelogin.html" ;
+             }
+        })
+    </script>
+</body>
+</html>

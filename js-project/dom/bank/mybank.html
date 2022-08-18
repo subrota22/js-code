@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My bank </title>
+</head>
+<body>
+<!--Balance histroy -->
+<div class="container mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <div class="bg-blue-400 py-10 px-8 m-4 rounded  text-white">
+        <h2 class="text-3xl font-bold">Deposit balance</h2>
+        <h2 class="text-4xl font-bold">$ <span id="depositBalance">00</span></h2>
+    </div>
+    <div class="bg-red-400 py-10 px-8 text-white rounded m-4 ">
+        <h2 class="text-3xl font-bold">Withdraw balance</h2>
+        <h2 class="text-4xl font-bold">$ <span id="withdrawBalance">00</span></h2>
+    </div>
+    <div class="bg-sky-400 py-10 px-8 rounded text-white m-4 ">
+        <h2 class="text-3xl font-bold">Bank Balance</h2>
+        <h2 class="text-4xl font-bold">$ <span id="bankBalance">1200</span></h2>
+    </div>
+</div>
+ </div>
+ <!-- withdraw and deposite  -->
+ <div class="container mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+    <div class="bg-lime-400 py-10 px-8 m-4 rounded">
+        <h2 class="text-3xl font-bold text-white ">Deposit Now</h2>
+        <input type="text"  placeholder="$ Enter your deposit amount" id="depositFeild" class="rounded p-4 w-3/4 my-4 font-bold">
+        <button class="block bg-sky-800 p-3 w-40 rounded my-4 hover:bg-blue-800 duration-1000 font-bold text-white " id="depositBtn">Deposite</button>
+    </div>
+    <div class="bg-indigo-400 py-10 px-8 rounded m-4 ">
+        <h2 class="text-3xl text-white ">Withdraw Now</h2>
+        <input type="text"  placeholder="$ Enter your withdraw amount" id="withdrawFeild" class="rounded p-4 w-3/4 my-4 font-bold">
+        <button class="block bg-sky-800 p-3 w-40 rounded my-4 hover:bg-blue-800 duration-1000 font-bold text-white" id="withdrawButton">Withdraw</button>
+    </div>
+</div>
+ </div>
+  <!-- js function link  -->
+  <script src="mybankfunc.js"></script>
+ <!-- js link  -->
+ <script src="mybank.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        #form{
+            margin: auto; 
+            margin-top: 85px;
+            background-color: black;
+            width: fit-content;
+            padding: 8px;
+            border-radius: 10px;
+        }
+        #button{
+            height: 50px;
+            width: 68px;
+            background-color: indigo;
+            border: none; 
+            padding: 5px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bolder;
+           margin: 5px;
+           color: white;
+           border-radius: 10px;
+        }
+
+        #display{
+            border-radius: 10px;
+            height: 50px;
+            width: 312px;
+            font-size: 18px;
+            font-weight: bolder;
+            padding-inline-start: 5px;
+        }
+        .calculate{
+            background-color: lime !important; 
+        }
+        .exit{
+            background-color:red !important;  
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator in js </title>
+</head>
+<body>
+    <form  name="calculator" id="form">
+        <input type="text"  name="display" id="display" placeholder="Calculation"/>
+        <div>
+            <input type="button" id="button" value="9" onclick="calculator.display.value+='9' " />
+            <input type="button" id="button" value="8" onclick="calculator.display.value+='8' "/>
+            <input type="button" id="button" value="7" onclick="calculator.display.value+='7' "/>
+            <input type="button" id="button" value="+" onclick="calculator.display.value+='+' "/>
+        </div> 
+        <div>
+            <input type="button" id="button" value="6" onclick="calculator.display.value+='6' " />
+            <input type="button" id="button" value="5" onclick="calculator.display.value+='5' " />
+            <input type="button" id="button" value="4" onclick="calculator.display.value+='4' " />
+            <input type="button" id="button" value="--" onclick="calculator.display.value+='-' " />
+        </div> 
+        <div>
+            <input type="button" id="button" value="3" onclick="calculator.display.value+='3' " />
+            <input type="button" id="button" value="2" onclick="calculator.display.value+='2' " />
+            <input type="button" id="button" value="1" onclick="calculator.display.value+='1' " />
+            <input type="button" id="button" value="X" onclick="calculator.display.value+='*' " />
+        </div> 
+        <div>
+            <input type="button" id="button" value="0" onclick="calculator.display.value+='0' " />
+            <input type="button" id="button" value="DEL" onclick=" calculator.display.value= calculator.display.value.slice(0,-1)" />
+            <input type="button" id="button" class="calculate" value="=" onclick="calculator.display.value= eval(calculator.display.value)" />
+            <input type="button" id="button" value="/" onclick="calculator.display.value+='/' " />
+        </div> 
+
+        <div>
+            <input type="button" id="button" value="CLR" onclick="calculator.display.value ='' " />
+            <input type="button" id="button" value="^" onclick=" calculator.display.value+= '^' " />
+            <input type="button" id="button" value="%" onclick="calculator.display.value +='%'" />
+            <input type="button" id="button" class="exit" value="Exit" onclick="calculator.display.value ='' , alert('Exit success') " />
+        </div> 
+    </form>
+</body>
+</html>
