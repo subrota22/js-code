@@ -150,7 +150,40 @@
 // console.log(lastArray);
 
 
-const nayoks=["Bangla Bhai", "English Bhai","Korean Bhai " , "Turkish Bhai "]  ;
-for(const nayok of nayoks ) {
-  console.log(nayok);
-}
+// const nayoks=["Bangla Bhai", "English Bhai","Korean Bhai " , "Turkish Bhai "]  ;
+// for(const nayok of nayoks ) {
+//   console.log(nayok);
+// }
+
+// let count = 0;console.log(parseInt("count" + 1));
+
+// console.log(
+//   Math.pow(4, 0.5)+"spiderman"+"987"+Math.sqrt(9));
+
+
+// function generatePin(){ 
+//   return Math.floor(Math.random()*90000) + 10000; 
+// }
+
+// console.log(generatePin());
+
+// console.log(!isNaN("10X"));
+
+// const product = 5; const price = "7"; 
+// const subTotal = product * price; 
+// const tax = subTotal/10; 
+// const total = subTotal + tax; 
+// console.log(total);
+
+// const category="pen"; 
+// const performer = category+"-teller";
+
+// console.log(performer);
+
+// const numbers = [45, 12, 36, 84]
+// numbers.unshift(25) ;
+// console.log(numbers);
+
+// function getSum(a, b=9){return a+b;} console.log(getSum(2, 7));
+
+const y = x => x*x; const z = y(5); 

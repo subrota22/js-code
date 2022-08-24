@@ -51,7 +51,7 @@ document.getElementById("depositButton").addEventListener("click" , function() {
      const bankBalaneTextInsert = document.getElementById("bankBalance") ;
     const totalBankBalance = (bankBalance + newDepositAmount) ;
     bankBalaneTextInsert.innerText = totalBankBalance ;
-
+    console.log( "=========>>>--->---->" , setAmountById("depositBalance" , totalDepositAmount));
 }) ;
 
 
