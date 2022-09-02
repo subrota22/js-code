@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body{
+            background-color: rgb(19, 5, 32);
+        }
+        #apiContent{
+            overflow-y: scroll;
+            height: 650px;
+            width: 420px;
+            background-color: black;
+            color: lime;
+            font-size: 20px;
+            font-weight: bold;
+            margin: auto;
+        }
+        #apiContent::-webkit-scrollbar{
+            width: 15px;
+            background-color: rgba(50, 205, 50, 0.6);
+        }
+        #apiContent::-webkit-scrollbar-thumb{
+            width: 15px;
+            background-image: linear-gradient(to top , orange , lime , darkblue);
+            border-radius: 15px;
+        }
+        #HeadText{
+            text-align: center;
+            font-size: 32px;
+            color: white;
+            animation: animateHead alternate linear forwards infinite 1s;
+        }
+        @keyframes animateHead {
+            0%{
+                transform: scale(0.9);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API VIWER</title>
+</head>
+<body>
+  <div id="apiBody">
+    <h2 id="HeadText">JSON VIEWER</h2>
+<center>
+    <textarea id="apiContent" cols="30" rows="10" placeholder="Paster your code">
+Paste your json code
+        </textarea>  
+        </div>
+</center>
+
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+        #body{
+        background-color: lightseagreen;
+        margin: 20px;
+        text-align: center;
+        font-family: 'Edu SA Beginner', cursive;
+    }
+    #body::-webkit-scrollbar{
+        width: 17px;
+    }
+    #body::-webkit-scrollbar-thumb{
+        border-radius: 20px;
+        background-image:linear-gradient(to top , darkblue , cyan , indigo);
+    }
+.card-img-top2 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: 2px solid rgba(5, 41, 77, 0.4);
+    margin: auto;
+}
+.card2{
+    height: 350px;
+    background-color: 2px solid rgba(5, 41, 77, 0.4);
+}
+.card3{
+    height: 200px;
+}
+</style>
+<head>
+    <!--bootstrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+ <!--Google font family-->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+SA+Beginner&family=Finlandica:ital,wght@1,600&family=Gentium+Book+Plus:ital,wght@0,700;1,700&family=Lato:wght@700&family=Open+Sans:ital,wght@0,300;1,400&family=Poppins:wght@300;500&family=Raleway:wght@200&family=Roboto&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+  <!--fontawsome cdn link-->
+  <script src="https://kit.fontawesome.com/48706b2f58.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sports api</title>
+    <link rel="shortcut icon" href="https://img.freepik.com/free-photo/sports-tools_53876-138077.jpg?w=2000" type="image/x-icon">
+</head>
+<body id="body">
+
+ <!--Spinner-->
+
+ <div class="spinner-border m-auto" role="status" id="loading">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+    <!--attribute is situated inside of the tag-->
+<h2 class="fs-2 fw-bold text-center text-info">Get sports information</h2>
+<hr class="border my-3">
+<div class="alert alert-danger alert-dismissible fade show"  role="alert" id="errorMessage">
+    <strong>Please</strong> enter valid country name this data not avilable
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <div class="alert alert-primary alert-dismissible fade show"  role="alert" id="emptyMessage">
+    <strong>Please</strong> enter your country name to get information
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+    <!--Search form-->
+    <div class="container">
+        <div class="form-group d-flex flex-row  justify-content-center text-center m-5">
+            <input type="search"  id="searchValue" placeholder="Search with country name like bangladesh" class="form-control w-50"/>
+            <button class="btn btn-outline-primary" onclick="searchData()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+
+<section>
+    <main>
+        <!--Display search data-->
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 gy-4"  id="displaySearchData">
+
+    </div>
+</div>
+<br><br>
+    <!--display sport -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 gy-4"  id="displayData">
+    
+        </div>
+    </div>
+    <br><br>
+    </main>
+</section>
+
+</div>
+<script src="sports.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

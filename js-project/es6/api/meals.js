@@ -27,7 +27,7 @@ mealContainer.innerText = "" ;
                       <p class="card-text">${meal.strInstructions}</p>
                       <h5 class="card-title text-info">Element to make batter</h5>
                       <p class="card-text"> ${meal.strIngredient }   ${meal.strIngredient2 }  ${meal.strIngredient3 }  ${meal.strIngredient4 }</p>
-                      <button onclick="mealDetials(${meal.idMeal})" type="button" class="btn btn-primary">
+                      <button onclick="mealDetials(${meal.idMeal})" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                       More info
                     </button>
                       </div>
@@ -54,12 +54,11 @@ fetch(url)
  }
 
  const displayDynamicFood = (displayFood) =>{
-const displayFoodDiv = document.getElementById("dynamicDisplayFoodDetails") ;
+const displayFoodDiv = document.getElementById("displayDynamicData") ;
 console.log(displayFood);
 displayFoodDiv.innerHTML = "" ;
 const dynamicDiv = document.createElement("div") ;
-dynamicDiv.classList.add("card") ;
-dynamicDiv.style.width=  "50%" ;
+dynamicDiv.style.width=  "100%" ;
 dynamicDiv.style.margin=  "auto" ;
 dynamicDiv.style.marginTop=  "20px" ;
 dynamicDiv.style.marginBottom=  "20px" ;

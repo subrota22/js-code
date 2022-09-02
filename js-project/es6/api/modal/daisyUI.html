@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- daisy ui cdn  -->    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daisy UI</title>
+</head>
+<body>
+    <div class="form-control">
+        <label class="label cursor-pointer">
+          <span class="label-text">Remember me</span>
+          <input type="checkbox" class="toggle toggle-primary" checked id="changeColor"/>
+        </label>
+      </div>
+      <script>
+const changeColor = document.getElementById('changeColor'),
+      colors      = ['black', 'white'];
+let   colorIndex  = 0;
+
+changeColor.addEventListener('click', () => {
+  document.body.style.backgroundColor = colors[colorIndex];      
+  colorIndex = (colorIndex + 1) % colors.length ;
+});
+      </script>
+    <div class="navbar bg-base-100">
+        <div class="flex-none">
+          <button class="btn btn-square btn-ghost">
+            <svg xmlns="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkpsidMw3zMYmWnrUDHQj6gw5Ql5Xsyp4AqaeUD6alG22F40p3SLwY9hLDNFhYVL3XOYg&usqp=CAU" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+        <div class="flex-1">
+          <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+        </div>
+        <div class="flex-none">
+          <button class="btn btn-square btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+          </button>
+        </div>
+      </div>
+      <br>
+      <!------------count down----------------->
+      <div class="flex gap-5">
+        <div>
+          <span class="countdown font-mono text-4xl">
+            <span style="--value:15;"></span>
+          </span>
+          days
+        </div> 
+        <div>
+          <span class="countdown font-mono text-4xl">
+            <span style="--value:10;"></span>
+          </span>
+          hours
+        </div> 
+        <div>
+          <span class="countdown font-mono text-4xl">
+            <span style="--value:24;"></span>
+          </span>
+          min
+        </div> 
+        <div>
+          <span class="countdown font-mono text-4xl">
+            <span style="--value:49;"></span>
+          </span>
+          sec
+        </div>
+      </div>
+      <!-----------carousel----------->
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwYEbHcmry_LTWxtlP-gLEhe62QPXIMCZSR8sOGC1mPs7-FfRBntNwwm3XxihvAz1-mHA&usqp=CAU" class="w-full h-1/2" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide4" class="btn btn-circle">❮</a> 
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="https://thumbs.dreamstime.com/b/purple-flower-2212075.jpg" class="w-full h-1/2" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle">❮</a> 
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="https://www.washingtonian.com/wp-content/uploads/2022/04/GettyImages-tulips-social.jpg" class="w-full h-1/2" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a> 
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide4" class="carousel-item relative w-full">
+          <img src="https://placeimg.com/800/200/arch" class="w-full h-1/2" />
+          <div class="absolute flex justify-between transform -mt-5 -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle">❮</a> 
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <ul class="steps">
+        <li class="step step-primary">Register</li>
+        <li class="step step-primary">Choose plan</li>
+        <li class="step">Purchase</li>
+        <li class="step">Receive Product</li>
+      </ul>
+      <br>
+      <!-----------Avatar----------->
+      <div class="avatar-group -space-x-6">
+        <div class="avatar">
+          <div class="w-12">
+            <img src="https://placeimg.com/192/192/people" />
+          </div>
+        </div>
+        <div class="avatar">
+          <div class="w-12">
+            <img src="https://www.washingtonian.com/wp-content/uploads/2022/04/GettyImages-tulips-social.jpg" />
+          </div>
+        </div>
+        <div class="avatar">
+          <div class="w-12">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwYEbHcmry_LTWxtlP-gLEhe62QPXIMCZSR8sOGC1mPs7-FfRBntNwwm3XxihvAz1-mHA&usqp=CAU" />
+          </div>
+        </div>
+        <div class="avatar placeholder">
+          <div class="w-12 bg-neutral-focus text-neutral-content">
+            <span>+99</span>
+          </div>
+        </div>
+      </div>
+
+<br><br>
+
+<!-- The button to open modal -->
+<label for="my-modal-6" class="btn modal-button">open modal</label>
+
+<input type="checkbox" id="my-modal-6" class="modal-toggle"/>
+<div class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+    <div class="modal-action">
+      <label for="my-modal-6" class="btn">Yay!</label>
+    </div>
+  </div>
+</div>
+<br> <br>
+<!-- table  -->
+<div class="overflow-x-auto w-full">
+    <table class="table w-full">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th>
+            <label>
+              <input type="checkbox" class="checkbox" />
+            </label>
+          </th>
+          <th>Name</th>
+          <th>Job</th>
+          <th>Favorite Color</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- row 1 -->
+        <tr>
+          <th>
+            <label>
+              <input type="checkbox" class="checkbox" />
+            </label>
+          </th>
+          <td>
+            <div class="flex items-center space-x-3">
+              <div class="avatar">
+                <div class="mask mask-squircle w-12 h-12">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwYEbHcmry_LTWxtlP-gLEhe62QPXIMCZSR8sOGC1mPs7-FfRBntNwwm3XxihvAz1-mHA&usqp=CAU" alt="Avatar Tailwind CSS Component" />
+                </div>
+              </div>
+              <div>
+                <div class="font-bold">Hart Hagerty</div>
+                <div class="text-sm opacity-50">United States</div>
+              </div>
+            </div>
+          </td>
+          <td>
+            Zemlak, Daniel and Leannon
+            <br>
+            <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
+          </td>
+          <td>Purple</td>
+          <th>
+            <button class="btn btn-ghost btn-xs">details</button>
+          </th>
+        </tr>
+        <!-- row 2 -->
+        <tr>
+          <th>
+            <label>
+              <input type="checkbox" class="checkbox" />
+            </label>
+          </th>
+          <td>
+            <div class="flex items-center space-x-3">
+              <div class="avatar">
+                <div class="mask mask-squircle w-12 h-12">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwYEbHcmry_LTWxtlP-gLEhe62QPXIMCZSR8sOGC1mPs7-FfRBntNwwm3XxihvAz1-mHA&usqp=CAU " alt="Avatar Tailwind CSS Component" />
+                </div>
+              </div>
+              <div>
+                <div class="font-bold">Brice Swyre</div>
+                <div class="text-sm opacity-50">China</div>
+              </div>
+            </div>
+          </td>
+          <td>
+            Carroll Group
+            <br>
+            <span class="badge badge-ghost badge-sm">Tax Accountant</span>
+          </td>
+          <td>Red</td>
+          <th>
+            <button class="btn btn-ghost btn-xs">details</button>
+          </th>
+        </tr>
+        <!-- row 3 -->
+        <tr>
+          <th>
+            <label>
+              <input type="checkbox" class="checkbox" />
+            </label>
+          </th>
+          <td>
+            <div class="flex items-center space-x-3">
+              <div class="avatar">
+                <div class="mask mask-squircle w-12 h-12">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwYEbHcmry_LTWxtlP-gLEhe62QPXIMCZSR8sOGC1mPs7-FfRBntNwwm3XxihvAz1-mHA&usqp=CAU" alt="Avatar Tailwind CSS Component" />
+                </div>
+              </div>
+              <div>
+                <div class="font-bold">Marjy Ferencz</div>
+                <div class="text-sm opacity-50">Russia</div>
+              </div>
+            </div>
+          </td>
+          <td>
+            Rowe-Schoen
+            <br>
+            <span class="badge badge-ghost badge-sm">Office Assistant I</span>
+          </td>
+          <td>Crimson</td>
+          <th>
+            <button class="btn btn-ghost btn-xs">details</button>
+          </th>
+        </tr>
+        <!-- row 4 -->
+        <tr>
+          <th>
+            <label>
+              <input type="checkbox" class="checkbox" />
+            </label>
+          </th>
+          <td>
+            <div class="flex items-center space-x-3">
+              <div class="avatar">
+                <div class="mask mask-squircle w-12 h-12">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwYEbHcmry_LTWxtlP-gLEhe62QPXIMCZSR8sOGC1mPs7-FfRBntNwwm3XxihvAz1-mHA&usqp=CAU"  alt="Avatar Tailwind CSS Component" />
+                </div>
+              </div>
+              <div>
+                <div class="font-bold">Yancy Tear</div>
+                <div class="text-sm opacity-50">Brazil</div>
+              </div>
+            </div>
+          </td>
+          <td>
+            Wyman-Ledner
+            <br>
+            <span class="badge badge-ghost badge-sm">Community Outreach Specialist</span>
+          </td>
+          <td>Indigo</td>
+          <th>
+            <button class="btn btn-ghost btn-xs">details</button>
+          </th>
+        </tr>
+      </tbody>
+      <!-- foot -->
+      <tfoot>
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Job</th>
+          <th>Favorite Color</th>
+          <th></th>
+        </tr>
+      </tfoot>
+      
+    </table>
+  </div>
+  <span class="countdown font-mono text-2xl">
+    <span style="--value:10;"></span>:
+    <span style="--value:24;"></span>:
+    <span style="--value:0;"></span>
+  </span>
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

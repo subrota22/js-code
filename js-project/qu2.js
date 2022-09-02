@@ -84,9 +84,131 @@
 // .then(response => response.json())
 // .then(data => console.log(data))
 
-const stuInfo = JSON.stringify({ name: "James", roll: 3 }); 
-console.log(stuInfo.name);
+// const stuInfo = JSON.stringify({ name: "James", roll: 3 }); 
+// console.log(stuInfo.name);
 
-fetch('https://jsonplaceholder.typicode.com/todo/1') 
-.then(response => response.json() )
-.then(json => console.log(json))
+// fetch('https://jsonplaceholder.typicode.com/todo/1') 
+// .then(response => response.json() )
+// .then(json => console.log(json))
+
+
+// const person = [
+//     {
+//       name: "rahim",
+//       age: 22,
+//       friends: ["rahim,karim,jabbar"],
+//     },
+//     {
+//       name: "rahim2",
+//       age: 22,
+//       friends: ["rahim,karim,jabbar"],
+//     },
+//     {
+//     name: "rahim3",
+//     age: 22,
+//     friends: ["rahim,karim,jabbar"],
+//   },
+//   ];
+//   console.log(person.slice(1 , 2));
+
+
+//   const dreamGirl =
+  
+//   [
+//     {
+//       sokina: {
+//         name: "bbu",
+//         height: "5.4",
+//         family: [{ father: "rock", mother: "shila", sister: "chinki" }],
+//         age: undefined,
+//         contactInfo: [
+//           {
+//             facebook: {
+//               link: "https://www.facebook.com/",
+//               followers: "12545",
+//               status: "single",
+//               friendsList: [{ name: "rofik" }, undefined],
+//             },
+//           },
+//           { instagram: "https://www.instagram.com/" },
+//         ],
+//       },
+//     },
+//   ];
+//   console.log(dreamGirl[0].sokina.contactInfo[1].instagram );
+
+//   const phones = [
+//     { name: "sonyapu", price: 500 },
+//     { name: "apple", price: 700 },
+//     { name: "sony", price: 700 },
+//   ]; 
+//  const phPrice = phones.filter(phone => {
+//         if(   phone.price!=500  ) {
+
+//             console.log(phone.name);
+//         }
+// } )
+// const name =[
+//     {
+//         studetn:{
+//             nameOfStudent:{
+//                 first:21 ,
+//                 second:58 ,
+//                 third:45 ,
+//                 age:{
+//                     first:21 ,
+//                     second:58 ,
+//                     third:45 ,
+//                     schoolName:{
+//                         first:21 ,
+//                         second:58 ,
+//                         third:45 , 
+//                     }
+//                 }
+//             }
+//         } 
+//     }
+// ]
+
+// console.log(phPrice);
+
+// const nayoks = {name: "hero", age:"28", isMarried: false};
+// console.log(Object.entries(nayoks) );
+// for(let nayok in nayoks) {
+//     console.log(nayok);
+// }
+// const obj ={a:1, b:7, c:3, length:2};
+// console.log(Object.keys(obj).length);
+// //
+// const obj1= {module: 35, video:2}; 
+// const obj2= {module: 35, video:2};
+// console.log(obj1 === obj2); //cause store data different computer memory location
+
+// const getGirlFriend= (name = "chokina")=>"name";
+//  console.log(getGirlFriend()); 
+
+//----------------- calculate the oil price start ----------------------//
+function oilPrice(diselRequire , petrolRequire , octaneRequire) {
+    if(typeof diselRequire ==="number" && typeof petrolRequire ==="number" && typeof octaneRequire === "number") {
+    //--------------- Oil price -------------//
+    const diselPrice = 114 ;
+    const petrolPrice = 130 ;
+    const octanePrice =135 ;
+    //--------------- Oil price end -------------//
+    const diselTotalPrice = diselRequire * diselPrice ;
+    const petrolTotalPrice = petrolRequire * petrolPrice ;
+    const octaneTotalPrice = octaneRequire * octanePrice ;
+    const totalPriceOfOil = diselTotalPrice + petrolTotalPrice + octaneTotalPrice ;
+    return totalPriceOfOil ;
+    } else{
+    console.log("Please input valid numbers of oil ");
+    }
+    }
+    //variable to use parameter of function
+    let diselRequire = 30 ;
+    let petrolRequire = 20 ;
+    let octaneRequire = 10;
+    //call the oilPrice function
+    const callOilPriceFunction = oilPrice(diselRequire , petrolRequire , octaneRequire) ;
+    console.log(callOilPriceFunction);
+    //----------------- calculate the oil price end --------------//
